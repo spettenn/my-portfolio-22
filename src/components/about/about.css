@@ -7,3 +7,41 @@
     width: 100%;
     background-color: #F67280;
 }
+.about_btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+}
+#young_age_btn {
+    background-color: #C06C8C;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+#middle_age_btn {
+    background-color: #6C5B7B;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+#late_age_btn {
+    background-color: #355C7D;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
