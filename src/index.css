@@ -1,5 +1,7 @@
 @import "../src/components/landing/ladning.css";
-
+@import "../src/components/about/about.css";
+@import "../src/components/work/work.css";
+@import "../src/components/contact/contact.css";
 body {
   margin: 0;
   padding: 0;
