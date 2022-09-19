@@ -1,26 +1,39 @@
 // fetch api from openweathermap.org
 // and display the weather in the contact page
+// only fetch for Oslo
 import React, { useState, useEffect } from 'react';
 
-export default function Weather() {
+const Weather = () => {
 	const [weather, setWeather] = useState({});
+	const [loading, setLoading] = useState(true);
+
 	useEffect(() => {
 		fetch(
 			`https://api.open-meteo.com/v1/forecast?latitude=59.9138&longitude=10.7387&hourly=temperature_2m`
 		)
 			.then((res) => res.json())
-			.then((result) => {
-				setWeather(result);
+			.then((data) => {
+				setWeather(data);
+				setLoading(false);
+				console.log(data);
+			})
+			.catch((err) => {
+				console.log(err);
 			});
 	}, []);
+
+	if (loading) {
+		return <div>loading...</div>;
+	}
+
 	return (
-		<div>
-			<h4>Weather in Oslo:</h4>
-			<h4>
-				{weather.main !== undefined
-					? weather.main.temp + '°C'
-					: 'Laster inn...'}
-			</h4>
+		<div className='weather_container'>
+			<h3>
+				{' '}
+				Weather in Oslo: {weather.main.temp} {weather.weather[0].description}{' '}
+			</h3>
 		</div>
 	);
-}
+};
+
+export default Weather;

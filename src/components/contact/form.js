@@ -38,7 +38,7 @@ const ContactForm = () => {
 				<input
 					className='form_input'
 					type='email'
-					placeholder='Email'
+					placeholder='E-mail'
 					name='email'
 					required
 				/>
@@ -47,6 +47,7 @@ const ContactForm = () => {
 				<textarea
 					className='form_input_textarea'
 					placeholder='Your message'
+					type='text'
 					id='message_form'
 					name='message'
 					required

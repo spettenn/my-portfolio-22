@@ -58,13 +58,18 @@
     margin-top: 1rem;
 }
 .form_submit {
-    width: 20rem;
+    width: 20.5rem;
     background-color: #F67280;
-    border: none;
+    border: 2px solid #F67280;
     color: white;
     height: 2rem;
     margin-top: 1rem;
     cursor: pointer;
+
+}
+.form_submit:hover {
+  background-color: transparent;
+  color: #F67280;
 }
 input[type=text]{
     border: 2px solid #ccc;
@@ -84,12 +89,12 @@ input[type=text]:focus {
 input[type=email]:focus {
     border: 2px solid #F67280;
   }
-  input[id=message_form]{
+  textarea[type=text]{
     border: 2px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
 }
-input[id=message_form]:focus {
+textarea[type=text]:focus {
     border: 2px solid #F67280;
   }

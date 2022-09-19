@@ -72,6 +72,8 @@ margin-top: 6rem;
   border: 2px solid;
   margin-right: 2rem;
   margin-left: 2rem;
+  cursor: pointer;
+  background-color: transparent;
   border-image: linear-gradient(var(--angle), #12c2e9, #f8eafe, #f64f59) 1;
   animation: 5s rotate linear infinite;
   --angle: 0deg;

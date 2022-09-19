@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactForm from './form';
-import Weather from './weather';
+
+//import Weather from './weather';
 
 export default function Contact() {
 	return (
@@ -16,12 +17,13 @@ export default function Contact() {
 						}>
 						Aleksanderspetalen@gmail
 					</button>
+					<img src='#' alt='me' />
 				</div>
 				<div className='contact_form_container'>
 					<ContactForm></ContactForm>
 				</div>
-				<Weather></Weather>
 			</div>
+			{/* <Weather></Weather> */}
 		</div>
 	);
 }

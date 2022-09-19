@@ -9,21 +9,27 @@ export default function Landing() {
 				<div className='landing_content'>
 					<h1 className='Landing_title'>Hello, I am Aleksander :)</h1>
 					<div class='btn-group my-5'>
-						<a className='about_me_landing' href='#' aria-current='page'>
+						<a className='about_me_landing' href='#about' aria-current='page'>
 							More about me
 						</a>
 					</div>
 					<div className='landing_content_seperator'></div>
 					<div className='landing_navlinks'>
-						<a className='landing_btn' href='#'>
+						<a
+							className='landing_btn'
+							href='https://www.linkedin.com/in/aleksander-spetalen-450013209/'>
 							linkedIn
 						</a>
-						<a className='landing_btn' href='#'>
+						<a className='landing_btn' href='https://github.com/spettenn'>
 							gitHub
 						</a>
-						<a className='landing_btn' href='#'>
+						<button
+							className='landing_btn'
+							onClick={() =>
+								navigator.clipboard.writeText('Aleksanderspetalen@gmail.com')
+							}>
 							E-mail
-						</a>
+						</button>
 					</div>
 					<div className='landing_arrow_down'>
 						<div class='arrow bounce'>

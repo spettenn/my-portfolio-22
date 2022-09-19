@@ -18,7 +18,7 @@ function displayAgeLate() {
 
 export default function About() {
 	return (
-		<div className='about_page_container'>
+		<div id='about' className='about_page_container'>
 			<h1>About Page</h1>
 			<div className='about_btn_container'>
 				<button id='young_age_btn' type='button' onClick={displayAgeYoung}>
