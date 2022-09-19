@@ -1,6 +1,8 @@
 import React from 'react';
 import ContactForm from './form';
 import me from '../../images/me.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faCopy } from '@fortawesome/free-solid-svg-icons';
 
 //import Weather from './weather';
 
@@ -17,6 +19,10 @@ export default function Contact() {
 							navigator.clipboard.writeText('Aleksanderspetalen@gmail.com')
 						}>
 						Aleksanderspetalen@gmail
+						<FontAwesomeIcon
+							className='copy_email_icon'
+							icon={faCopy}
+							size='1x'></FontAwesomeIcon>
 					</button>
 					<img src={me} className='img_me' alt='me' width='150' height='150' />
 				</div>
@@ -24,7 +30,14 @@ export default function Contact() {
 					<ContactForm></ContactForm>
 				</div>
 			</div>
-			{/* <Weather></Weather> */}
+			<div className='contact_page_footer'>
+				<div>Hello</div>
+				{/* <Weather></Weather> */}
+				<FontAwesomeIcon
+					className='arrow_bottom'
+					href='#landing'
+					icon={faArrowUp}></FontAwesomeIcon>
+			</div>
 		</div>
 	);
 }

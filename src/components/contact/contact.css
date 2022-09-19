@@ -28,6 +28,7 @@
     background-color: transparent;
     border: none;
     color: white;
+    --animate__pulse: 1s;
 }
 .img_me {
     border-radius: 50%;
@@ -93,3 +94,24 @@ input[type=email]:focus {
 textarea[type=text]:focus {
     border: 2px solid #F67280;
   }
+.contact_page_footer {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.arrow_bottom {
+  border: 1px solid #F67280;
+  border-radius: 50%;
+  padding: 1rem;
+  color: #F67280;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.arrow_bottom:hover {
+  background-color: #F67280;
+  color: white;
+}
+.copy_email_icon {
+  margin-left: 10px;
+}

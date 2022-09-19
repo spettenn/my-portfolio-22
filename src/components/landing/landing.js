@@ -4,7 +4,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function Landing() {
 	return (
-		<div className='landing_page_container'>
+		<div id='landing' className='landing_page_container'>
 			<div className='inner_landing_wrapper'>
 				<div className='landing_content'>
 					<h1 className='Landing_title'>Hello, I am Aleksander :)</h1>
@@ -31,12 +31,9 @@ export default function Landing() {
 							E-mail
 						</button>
 					</div>
-					<div className='landing_arrow_down'>
+					<div href='#about' className='landing_arrow_down'>
 						<div class='arrow bounce'>
-							<FontAwesomeIcon
-								href='#about'
-								icon={faArrowDown}
-								size='6x'></FontAwesomeIcon>
+							<FontAwesomeIcon icon={faArrowDown} size='6x'></FontAwesomeIcon>
 						</div>
 					</div>
 				</div>
