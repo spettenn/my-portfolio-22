@@ -34,7 +34,7 @@ export default function Landing() {
 					<div className='landing_arrow_down'>
 						<div class='arrow bounce'>
 							<FontAwesomeIcon
-								href='#'
+								href='#about'
 								icon={faArrowDown}
 								size='6x'></FontAwesomeIcon>
 						</div>

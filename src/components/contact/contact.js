@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from './form';
+import me from '../../images/me.png';
 
 //import Weather from './weather';
 
@@ -17,7 +18,7 @@ export default function Contact() {
 						}>
 						Aleksanderspetalen@gmail
 					</button>
-					<img src='#' alt='me' />
+					<img src={me} className='img_me' alt='me' width='150' height='150' />
 				</div>
 				<div className='contact_form_container'>
 					<ContactForm></ContactForm>

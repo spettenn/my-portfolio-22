@@ -29,14 +29,10 @@
     border: none;
     color: white;
 }
-
-
-
-
-
-
-
-
+.img_me {
+    border-radius: 50%;
+    border: 1px solid white;
+}
 .contact_form_container{
     width: 30rem;
     height: 40rem;
@@ -65,7 +61,6 @@
     height: 2rem;
     margin-top: 1rem;
     cursor: pointer;
-
 }
 .form_submit:hover {
   background-color: transparent;

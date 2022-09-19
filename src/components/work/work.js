@@ -7,8 +7,8 @@ export default function Work() {
 				<h1>Work</h1>
 			</div>
 			<div className='work_page_content'>
-				<div className='work_page_content_left'></div>
-				<div className='work_page_content_right'></div>
+				<div className='work_page_content_left'>Previous project one</div>
+				<div className='work_page_content_right'>Previous project two</div>
 			</div>
 		</div>
 	);
