@@ -2,7 +2,7 @@
 @import "../src/components/about/about.css";
 @import "../src/components/work/work.css";
 @import "../src/components/contact/contact.css";
-@import 'animate.css';
+
 body {
   margin: 0;
   padding: 0;

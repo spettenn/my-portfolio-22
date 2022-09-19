@@ -9,10 +9,9 @@ import { faArrowUp, faCopy } from '@fortawesome/free-solid-svg-icons';
 export default function Contact() {
 	return (
 		<div className='contact_page_container'>
-			contact
 			<div className='contact_page_content'>
 				<div className='contact_info_container'>
-					<h4>Means to reach me:</h4>
+					<h4 id='contact_sub_title'>Means to reach me:</h4>
 					<button
 						className='contact_info_email'
 						onClick={() =>
