@@ -8,7 +8,7 @@ export default function Landing() {
 			<div className='inner_landing_wrapper'>
 				<div className='landing_content'>
 					<h1 className='Landing_title'>Hello, I am Aleksander :)</h1>
-					<div class='btn-group my-5'>
+					<div>
 						<a className='about_me_landing' href='#about' aria-current='page'>
 							More about me
 						</a>
@@ -32,7 +32,7 @@ export default function Landing() {
 						</button>
 					</div>
 					<div href='#about' className='landing_arrow_down'>
-						<div class='arrow bounce'>
+						<div className='arrow bounce'>
 							<FontAwesomeIcon icon={faArrowDown} size='6x'></FontAwesomeIcon>
 						</div>
 					</div>
