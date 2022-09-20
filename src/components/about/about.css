@@ -6,14 +6,27 @@
     width: 100%;
     background-color: #F67280;
 }
+.about_page_content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
 .about_btn_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 3rem;
-    width: 42rem;
+    width: 30rem;
     justify-content: space-between;
+}
+.about_page_content_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 #young_age_btn {
     background-color: #C06C8C;
@@ -47,7 +60,7 @@
 }
 #age {
     height: fit-content;
-    width: 40rem;
+    width: 28rem;
     color: white;
     margin: 0%;
     padding: 1rem;
