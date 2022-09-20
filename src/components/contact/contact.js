@@ -4,7 +4,7 @@ import me from '../../images/me.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCopy } from '@fortawesome/free-solid-svg-icons';
 
-//import Weather from './weather';
+import Weather from './weather';
 
 export default function Contact() {
 	return (
@@ -24,14 +24,14 @@ export default function Contact() {
 							size='1x'></FontAwesomeIcon>
 					</button>
 					<img src={me} className='img_me' alt='me' width='150' height='150' />
+					<Weather></Weather>
 				</div>
 				<div className='contact_form_container'>
 					<ContactForm></ContactForm>
 				</div>
 			</div>
 			<div className='contact_page_footer'>
-				<div>Hello</div>
-				{/* <Weather></Weather> */}
+				<div></div>
 				<FontAwesomeIcon
 					className='arrow_bottom'
 					href='#landing'
