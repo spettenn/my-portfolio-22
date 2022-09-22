@@ -102,9 +102,24 @@ textarea[type=text]:focus {
   }
 .contact_page_footer {
   height: 10rem;
-  width: 100%;
+  width: 80%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  padding-top: 2rem;
+}
+.footer_middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer_end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .arrow_bottom {
   border: 1px solid #F67280;
@@ -112,8 +127,7 @@ textarea[type=text]:focus {
   padding: 1rem;
   color: #F67280;
   cursor: pointer;
-  margin-right: 12%;
-  margin-top: 2rem;
+
 }
 .arrow_bottom:hover {
   background-color: #F67280;

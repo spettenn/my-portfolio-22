@@ -47,6 +47,11 @@ export default function About() {
 				</div>
 				<div className='about_page_content_right'>
 					<h3>what can i do? </h3>
+					<div>my experience with css / html</div>
+					<div>my experience with javaScript</div>
+					<div>my experience with react</div>
+					<div>my experience with nextJS</div>
+					<div>my experience with servers</div>
 				</div>
 			</div>
 		</div>

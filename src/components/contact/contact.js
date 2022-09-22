@@ -27,14 +27,21 @@ export default function Contact() {
 					<img src={me} className='img_me' alt='me' width='150' height='150' />
 					<div className='soMe_contact'>
 						<h1>
-							<FaDiscord className='icon_contact' />
+							<FaDiscord
+								className='icon_contact'
+								onClick={() => navigator.clipboard.writeText('Aleksander#1255')}
+							/>
 						</h1>
-						<h1>
-							<FaGithubSquare className='icon_contact' />
-						</h1>
-						<h1>
-							<FaLinkedin className='icon_contact' />
-						</h1>
+						<a href='https://github.com/spettenn'>
+							<h1>
+								<FaGithubSquare className='icon_contact' />
+							</h1>
+						</a>
+						<a href='https://www.linkedin.com/in/aleksander-spetalen-450013209/'>
+							<h1>
+								<FaLinkedin className='icon_contact' />
+							</h1>
+						</a>
 					</div>
 					<Weather></Weather>
 				</div>
@@ -43,10 +50,17 @@ export default function Contact() {
 				</div>
 			</div>
 			<div className='contact_page_footer'>
-				<FontAwesomeIcon
-					className='arrow_bottom'
-					href='#landing'
-					icon={faArrowUp}></FontAwesomeIcon>
+				<div className='footer_start'></div>
+				<div className='footer_middle'>
+					<p>My own work ofcourse ppc @2022</p>
+				</div>
+				<div className='footer_end'>
+					<a href='#landing'>
+						<FontAwesomeIcon
+							className='arrow_bottom'
+							icon={faArrowUp}></FontAwesomeIcon>
+					</a>
+				</div>
 			</div>
 		</div>
 	);
