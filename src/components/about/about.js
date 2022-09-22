@@ -26,7 +26,7 @@ function displayAgeLate() {
 export default function About() {
 	return (
 		<div id='about' className='about_page_container'>
-			<h1>About Page</h1>
+			<h1 id='about_title'>About me</h1>
 			<div className='about_page_content'>
 				<div className='about_page_content_left'>
 					<div className='about_btn_container'>
@@ -46,7 +46,7 @@ export default function About() {
 					<p id='age'>Want to read trough a short summary of my life?</p>
 				</div>
 				<div className='about_page_content_right'>
-					<p>what can i do? </p>
+					<h3>what can i do? </h3>
 				</div>
 			</div>
 		</div>

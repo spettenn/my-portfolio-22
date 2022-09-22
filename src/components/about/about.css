@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 30rem;
+    width: 32rem;
     justify-content: space-between;
 }
 .about_page_content_right {
@@ -26,7 +26,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
+    height: 80%;
+    border: 1px solid black;
+}
+#about_title {
+    font-size:2rem;
+    color: white;
+    font-family: 'Raleway', sans-serif;;
 }
 #young_age_btn {
     background-color: #C06C8C;
@@ -60,7 +67,7 @@
 }
 #age {
     height: fit-content;
-    width: 28rem;
+    width: 30rem;
     color: white;
     margin: 0%;
     padding: 1rem;
@@ -69,4 +76,7 @@
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     font-family:'Roboto', sans-serif;
+}
+#age p {
+    text-align: center;
 }

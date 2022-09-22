@@ -15,6 +15,7 @@ export default function Weather() {
 			.then((data) => {
 				setWeather(data);
 				setLoading(false);
+				console.log(data);
 			})
 			.catch((err) => {
 				setError(err.message);

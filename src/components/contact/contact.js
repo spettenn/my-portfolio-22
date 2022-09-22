@@ -3,6 +3,7 @@ import ContactForm from './form';
 import me from '../../images/me.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { FaDiscord, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 import Weather from './weather';
 
@@ -24,6 +25,17 @@ export default function Contact() {
 							size='1x'></FontAwesomeIcon>
 					</button>
 					<img src={me} className='img_me' alt='me' width='150' height='150' />
+					<div className='soMe_contact'>
+						<h1>
+							<FaDiscord className='icon_contact' />
+						</h1>
+						<h1>
+							<FaGithubSquare className='icon_contact' />
+						</h1>
+						<h1>
+							<FaLinkedin className='icon_contact' />
+						</h1>
+					</div>
 					<Weather></Weather>
 				</div>
 				<div className='contact_form_container'>
@@ -31,7 +43,6 @@ export default function Contact() {
 				</div>
 			</div>
 			<div className='contact_page_footer'>
-				<div></div>
 				<FontAwesomeIcon
 					className='arrow_bottom'
 					href='#landing'
