@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100%;
     background-color: #F67280;
+    
 }
 .about_page_content {
     display: flex;
@@ -90,11 +91,23 @@
     border: none;
 }
 
-
+#about_progress_btn {
+    width: fit-content;
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 3px;
+}
 .progressbarWrapper {
-    height: 30px;
-    width: 500px;
-    max-width: 80%;
+    height: 1.3rem;
+    width: 80%;
+    max-width: 500px;
+    
     display: block;
     margin: auto;
     position: relative;
@@ -112,7 +125,9 @@
     font-size: 15px;
     text-align: center;
     color: white;
-    transition: all 700ms ease;
+    transition: all 500ms ease;
+    display: flex;
+    justify-content: center;
   }
   #react-progress-bar {
     display: block;
@@ -124,22 +139,33 @@
     font-size: 15px;
     text-align: center;
     color: white;
-    transition: all 700ms ease;
+    transition: all 500ms ease;
   }
-  
-  button {
+  #dom-progress-bar {
     display: block;
-    margin: auto;
-    margin-top: 20px;
-    border: none;
-    border-radius: 2px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
-    cursor: pointer;
+    height: 100%;
+    width: 0px;
+    background-color: #355C7D;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 500ms ease;
+  }
+  #next-progress-bar {
+    display: block;
+    height: 100%;
+    width: 0px;
+    background-color: #355C7D;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 500ms ease;
   }
   
-  button:active {
-    width: 58px;
-    height: 28px;
-  }
+
+  
+  

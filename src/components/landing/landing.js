@@ -31,9 +31,11 @@ export default function Landing() {
 							E-mail
 						</button>
 					</div>
-					<div href='#about' className='landing_arrow_down'>
+					<div>
 						<div className='arrow bounce'>
-							<FontAwesomeIcon icon={faArrowDown} size='4x'></FontAwesomeIcon>
+							<a id='landing_down_arrow' href='#about'>
+								<FontAwesomeIcon icon={faArrowDown} size='4x'></FontAwesomeIcon>
+							</a>
 						</div>
 					</div>
 				</div>

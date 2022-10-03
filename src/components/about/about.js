@@ -1,33 +1,21 @@
 import React from 'react';
 
-/* function move() {
-	let elemJs = document.getElementById('js-progress-bar');
-	let elemReact = document.getElementById('react-progress-bar');
-	let stepValue = 0;
-	let id = setInterval(frame, 500);
-
-	function frame() {
-		if (elemJs.stepValue >= 85)
-			(elemReact.stepValue >= 75)
-		{
-			clearInterval(id);
-		} else {
-			elem.style.width = (stepValue + 10) + "%";
-			elem.innerHTML = (stepValue + 10) + "%";
-			stepValue=(stepValue + 10);
-		}
-	}
-} */
 function move() {
 	let elemJs = document.getElementById('js-progress-bar');
 	let elemReact = document.getElementById('react-progress-bar');
+	let elemDom = document.getElementById('dom-progress-bar');
+	let elemNext = document.getElementById('next-progress-bar');
 	let stepValueJs = 0;
 	let stepValueReact = 0;
-	let idJs = setInterval(frameJs, 500);
-	let idReact = setInterval(frameReact, 500);
+	let stepValueDom = 0;
+	let stepValueNext = 0;
+	let idJs = setInterval(frameJs, 300);
+	let idReact = setInterval(frameReact, 300);
+	let idDom = setInterval(frameDom, 300);
+	let idNext = setInterval(frameNext, 300);
 
 	function frameJs() {
-		if (stepValueJs >= 85) {
+		if (stepValueJs >= 80) {
 			clearInterval(idJs);
 		} else {
 			elemJs.style.width = stepValueJs + 5 + '%';
@@ -36,12 +24,30 @@ function move() {
 		}
 	}
 	function frameReact() {
-		if (stepValueReact >= 55) {
+		if (stepValueReact >= 75) {
 			clearInterval(idReact);
 		} else {
 			elemReact.style.width = stepValueReact + 5 + '%';
 			elemReact.innerHTML = stepValueReact + 5 + '%';
 			stepValueReact = stepValueReact + 5;
+		}
+	}
+	function frameNext() {
+		if (stepValueNext >= 80) {
+			clearInterval(idNext);
+		} else {
+			elemNext.style.width = stepValueNext + 5 + '%';
+			elemNext.innerHTML = stepValueNext + 5 + '%';
+			stepValueNext = stepValueNext + 5;
+		}
+	}
+	function frameDom() {
+		if (stepValueDom >= 90) {
+			clearInterval(idDom);
+		} else {
+			elemDom.style.width = stepValueDom + 5 + '%';
+			elemDom.innerHTML = stepValueDom + 5 + '%';
+			stepValueDom = stepValueDom + 5;
 		}
 	}
 }
@@ -92,8 +98,9 @@ export default function About() {
 					<p id='age'>Want to read trough a short summary of my life?</p>
 				</div>
 				<div className='about_page_content_right'>
-					<h3>what can i do? </h3>
-					<button onClick={move}>START</button>
+					<button id='about_progress_btn' onClick={move}>
+						Press me and see where my dev-skills are at!
+					</button>
 					<p>JS</p>
 					<div className='progressbarWrapper'>
 						<span id='js-progress-bar'></span>
@@ -102,34 +109,14 @@ export default function About() {
 					<div className='progressbarWrapper'>
 						<span id='react-progress-bar'></span>
 					</div>
-
-					{/* <h3>what can i do? </h3>
-					<div>my experience with css / html</div>
-					<progress
-						className='about_progress_bar'
-						id='html'
-						value='90'
-						max='100'>
-						80%
-					</progress>
-					<div>my experience with javaScript</div>
-					<progress
-						className='about_progress_bar'
-						id='js'
-						value='85'
-						max='100'></progress>
-					<div>my experience with react</div>
-					<progress
-						className='about_progress_bar'
-						id='rect'
-						value='70'
-						max='100'></progress>
-					<div>my experience with nextJS</div>
-					<progress
-						className='about_progress_bar'
-						id='next'
-						value='75'
-						max='100'></progress> */}
+					<p>nextJS</p>
+					<div className='progressbarWrapper'>
+						<span id='next-progress-bar'></span>
+					</div>
+					<p>html / css</p>
+					<div className='progressbarWrapper'>
+						<span id='dom-progress-bar'></span>
+					</div>
 				</div>
 			</div>
 		</div>
