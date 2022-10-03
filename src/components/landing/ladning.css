@@ -78,9 +78,7 @@ font-family: 'Raleway', sans-serif;
   margin-left: 2rem;
   cursor: pointer;
   background-color: transparent;
-  border-image: linear-gradient(var(--angle), #226d7e, #613772, #f64f59) 1;
-  animation: 5s rotate linear infinite;
-  --angle: 0deg;
+  border: 1px solid white;
   
 }
 @keyframes rotate {

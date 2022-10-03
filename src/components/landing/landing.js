@@ -2,8 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-import get_joke_of_the_day from './joke';
-
 export default function Landing() {
 	return (
 		<div id='landing' className='landing_page_container'>
@@ -15,7 +13,6 @@ export default function Landing() {
 							More about me
 						</a>
 					</div>
-					<get_joke_of_the_day />
 					<div className='landing_content_seperator'></div>
 					<div className='landing_navlinks'>
 						<a
@@ -36,7 +33,7 @@ export default function Landing() {
 					</div>
 					<div href='#about' className='landing_arrow_down'>
 						<div className='arrow bounce'>
-							<FontAwesomeIcon icon={faArrowDown} size='6x'></FontAwesomeIcon>
+							<FontAwesomeIcon icon={faArrowDown} size='4x'></FontAwesomeIcon>
 						</div>
 					</div>
 				</div>

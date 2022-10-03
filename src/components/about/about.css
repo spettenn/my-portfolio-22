@@ -24,11 +24,12 @@
 .about_page_content_right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 40%;
     height: 80%;
     border: 1px solid black;
+    color: white;
 }
 #about_title {
     font-size:2rem;
@@ -80,3 +81,54 @@
 #age p {
     text-align: center;
 }
+.about_progress_bar {
+    width: 80%;
+    height: 1rem;
+    max-width: 20rem;
+    background-color: white;
+    border-radius: 0px;
+    border: none;
+}
+
+
+.progressbarWrapper {
+    height: 30px;
+    width: 500px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    position: relative;
+    background: transparent;
+    border: 1px solid white;
+  }
+  
+  #js-progress-bar {
+    display: block;
+    height: 100%;
+    width: 0px;
+    background-color: #355C7D;
+    
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+  }
+  
+  button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:active {
+    width: 58px;
+    height: 28px;
+  }

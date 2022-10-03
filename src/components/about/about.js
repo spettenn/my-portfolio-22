@@ -1,5 +1,22 @@
 import React from 'react';
 
+function move() {
+	let elemJs = document.getElementById('js-progress-bar');
+	let elemReact = document.getElementById('react-progress-bar');
+	let stepValue = 0;
+	let id = setInterval(frame, 500);
+
+	function frame() {
+		if (elemJs.stepValue >= 85)
+			(elemReact.stepValue >= 75)
+		{
+			clearInterval(id);
+		} else {
+			elemJs.stepValue++;
+		}
+	}
+}
+
 function displayAgeYoung() {
 	document.getElementById('age').style.backgroundColor = '#C06C8C';
 	document.getElementById('age').innerHTML =
@@ -47,11 +64,41 @@ export default function About() {
 				</div>
 				<div className='about_page_content_right'>
 					<h3>what can i do? </h3>
+					<button onClick={move}>START</button>
+					<div className='progressbarWrapper'>
+						<span id='js-progress-bar'></span>
+					</div>
+					<div className='progressbarWrapper'>
+						<span id='react-progress-bar'></span>
+					</div>
+
+					{/* <h3>what can i do? </h3>
 					<div>my experience with css / html</div>
+					<progress
+						className='about_progress_bar'
+						id='html'
+						value='90'
+						max='100'>
+						80%
+					</progress>
 					<div>my experience with javaScript</div>
+					<progress
+						className='about_progress_bar'
+						id='js'
+						value='85'
+						max='100'></progress>
 					<div>my experience with react</div>
+					<progress
+						className='about_progress_bar'
+						id='rect'
+						value='70'
+						max='100'></progress>
 					<div>my experience with nextJS</div>
-					<div>my experience with servers</div>
+					<progress
+						className='about_progress_bar'
+						id='next'
+						value='75'
+						max='100'></progress> */}
 				</div>
 			</div>
 		</div>
