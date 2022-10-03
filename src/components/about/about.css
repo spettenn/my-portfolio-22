@@ -107,7 +107,18 @@
     height: 100%;
     width: 0px;
     background-color: #355C7D;
-    
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    transition: all 700ms ease;
+  }
+  #react-progress-bar {
+    display: block;
+    height: 100%;
+    width: 0px;
+    background-color: #355C7D;
     position: relative;
     overflow: hidden;
     font-size: 15px;

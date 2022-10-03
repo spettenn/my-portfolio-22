@@ -1,6 +1,6 @@
 import React from 'react';
 
-function move() {
+/* function move() {
 	let elemJs = document.getElementById('js-progress-bar');
 	let elemReact = document.getElementById('react-progress-bar');
 	let stepValue = 0;
@@ -12,7 +12,36 @@ function move() {
 		{
 			clearInterval(id);
 		} else {
-			elemJs.stepValue++;
+			elem.style.width = (stepValue + 10) + "%";
+			elem.innerHTML = (stepValue + 10) + "%";
+			stepValue=(stepValue + 10);
+		}
+	}
+} */
+function move() {
+	let elemJs = document.getElementById('js-progress-bar');
+	let elemReact = document.getElementById('react-progress-bar');
+	let stepValueJs = 0;
+	let stepValueReact = 0;
+	let idJs = setInterval(frameJs, 500);
+	let idReact = setInterval(frameReact, 500);
+
+	function frameJs() {
+		if (stepValueJs >= 85) {
+			clearInterval(idJs);
+		} else {
+			elemJs.style.width = stepValueJs + 5 + '%';
+			elemJs.innerHTML = stepValueJs + 5 + '%';
+			stepValueJs = stepValueJs + 5;
+		}
+	}
+	function frameReact() {
+		if (stepValueReact >= 55) {
+			clearInterval(idReact);
+		} else {
+			elemReact.style.width = stepValueReact + 5 + '%';
+			elemReact.innerHTML = stepValueReact + 5 + '%';
+			stepValueReact = stepValueReact + 5;
 		}
 	}
 }
@@ -65,9 +94,11 @@ export default function About() {
 				<div className='about_page_content_right'>
 					<h3>what can i do? </h3>
 					<button onClick={move}>START</button>
+					<p>JS</p>
 					<div className='progressbarWrapper'>
 						<span id='js-progress-bar'></span>
 					</div>
+					<p>React</p>
 					<div className='progressbarWrapper'>
 						<span id='react-progress-bar'></span>
 					</div>
