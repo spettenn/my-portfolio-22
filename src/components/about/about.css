@@ -103,16 +103,17 @@
     color: white;
     border-radius: 3px;
 }
+
 .progressbarWrapper {
     height: 1.3rem;
     width: 80%;
     max-width: 500px;
-    
-    display: block;
     margin: auto;
     position: relative;
     background: transparent;
     border: 1px solid white;
+    border-radius: 5px;
+    
   }
   
   #js-progress-bar {
@@ -122,12 +123,24 @@
     background-color: #355C7D;
     position: relative;
     overflow: hidden;
-    font-size: 15px;
-    text-align: center;
+    font-size: 18px;
     color: white;
     transition: all 500ms ease;
     display: flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-rendering: optimizeSpeed;
+  }
+  #js-progress-bar::after {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   #react-progress-bar {
     display: block;
@@ -136,10 +149,14 @@
     background-color: #355C7D;
     position: relative;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     color: white;
     transition: all 500ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
   }
   #dom-progress-bar {
     display: block;
@@ -148,10 +165,14 @@
     background-color: #355C7D;
     position: relative;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     color: white;
     transition: all 500ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
   }
   #next-progress-bar {
     display: block;
@@ -160,10 +181,14 @@
     background-color: #355C7D;
     position: relative;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     color: white;
     transition: all 500ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
   }
   
 

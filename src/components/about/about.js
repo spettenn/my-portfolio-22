@@ -5,6 +5,11 @@ function move() {
 	let elemReact = document.getElementById('react-progress-bar');
 	let elemDom = document.getElementById('dom-progress-bar');
 	let elemNext = document.getElementById('next-progress-bar');
+	let wrapper = document.getElementById('about-progress-bar');
+	const jsSkill = 80;
+	const reactSkill = 70;
+	const domSkill = 60;
+	const nextSkill = 50;
 	let stepValueJs = 0;
 	let stepValueReact = 0;
 	let stepValueDom = 0;
@@ -15,16 +20,23 @@ function move() {
 	let idNext = setInterval(frameNext, 300);
 
 	function frameJs() {
-		if (stepValueJs >= 80) {
+		if (stepValueJs >= jsSkill) {
 			clearInterval(idJs);
 		} else {
 			elemJs.style.width = stepValueJs + 5 + '%';
-			elemJs.innerHTML = stepValueJs + 5 + '%';
+			elemJs.innerHTML = stepValueJs + 5 + '%' + ' - Javascript';
 			stepValueJs = stepValueJs + 5;
 		}
+		move.on('click', function () {
+			if (wrapper.css('opacity') === 0) {
+				wrapper.css('opacity', 1);
+			} else {
+				wrapper.css('opacity', 0);
+			}
+		});
 	}
 	function frameReact() {
-		if (stepValueReact >= 75) {
+		if (stepValueReact >= reactSkill) {
 			clearInterval(idReact);
 		} else {
 			elemReact.style.width = stepValueReact + 5 + '%';
@@ -33,7 +45,7 @@ function move() {
 		}
 	}
 	function frameNext() {
-		if (stepValueNext >= 80) {
+		if (stepValueNext >= domSkill) {
 			clearInterval(idNext);
 		} else {
 			elemNext.style.width = stepValueNext + 5 + '%';
@@ -42,7 +54,7 @@ function move() {
 		}
 	}
 	function frameDom() {
-		if (stepValueDom >= 90) {
+		if (stepValueDom >= nextSkill) {
 			clearInterval(idDom);
 		} else {
 			elemDom.style.width = stepValueDom + 5 + '%';
@@ -101,7 +113,7 @@ export default function About() {
 					<button id='about_progress_btn' onClick={move}>
 						Press me and see where my dev-skills are at!
 					</button>
-					<p>JS</p>
+
 					<div className='progressbarWrapper'>
 						<span id='js-progress-bar'></span>
 					</div>
