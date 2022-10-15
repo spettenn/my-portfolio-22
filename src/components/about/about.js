@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useReducer } from 'react';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+	faArrowLeft,
+	faArrowRight,
+	faChevronDown,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
@@ -103,6 +107,14 @@ const Slider = () => {
 						<p className='about_one_text'>
 							Take a look trough my time-line and see where i am at!
 						</p>
+						<div className='arrow bounce'>
+							<a id='about_down_arrow' href='#work'>
+								<FontAwesomeIcon
+									icon={faChevronDown}
+									size='4x'
+									className='about_arrow_inner'></FontAwesomeIcon>
+							</a>
+						</div>
 					</div>
 				),
 			},

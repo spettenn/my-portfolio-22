@@ -1,10 +1,12 @@
 import React from 'react';
 import prev_project_three from '../../images/prev_project_three.PNG';
 import prev_project_two from '../../images/prev_project_two.PNG';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Work() {
 	return (
-		<div className='work_page_container'>
+		<div id='work' className='work_page_container'>
 			<h2 class='work_page_title'>My previous work</h2>
 			<a href='https://superlative-sunshine-5a1fb3.netlify.app/'>
 				<div className='work_page_card'>
@@ -46,6 +48,14 @@ export default function Work() {
 					</div>
 				</div>
 			</a>
+			<div className='arrow_work bounce'>
+				<a id='work_down_arrow' href='#contact'>
+					<FontAwesomeIcon
+						icon={faChevronDown}
+						size='4x'
+						className='about_arrow_inner'></FontAwesomeIcon>
+				</a>
+			</div>
 		</div>
 	);
 }

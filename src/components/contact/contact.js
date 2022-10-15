@@ -9,7 +9,7 @@ import Weather from './weather';
 
 export default function Contact() {
 	return (
-		<div className='contact_page_container'>
+		<div id='contact' className='contact_page_container'>
 			<div className='contact_page_content'>
 				<div className='contact_info_container'>
 					<h4 id='contact_sub_title'>Means to reach me:</h4>
