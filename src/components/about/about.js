@@ -1,6 +1,217 @@
-import React from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 
-function move() {
+import {
+	SliderItem,
+	SliderContainer,
+	SliderWrapper,
+	Navigation,
+	NavigationItem,
+	ControlLeft,
+	ControlRight,
+} from './style';
+
+const Slider = () => {
+	const width = useWindowWidth();
+	const [state, dispatch] = useReducer(reducer, {
+		currentIndex: 0,
+		items: [
+			{
+				id: 1,
+				name: (
+					<div className='about_page_one'>
+						<h1>First</h1>
+						<p>First paragraph</p>
+					</div>
+				),
+			},
+			{
+				id: 2,
+				// stle object
+				name: (
+					<div className='about_page_two'>
+						<h3>Second page</h3>
+						<p>
+							I was born in oslo (1995), or more spesificly the suburbs. When i
+							was young, me and my family lived abroad for three years. This
+							forced me to learn english at a very young age, and in a sence
+							gave me better oportunities to work with web-development as
+							english has been the default language for the web. Going to
+							international school at this age helped give med perspective and
+							recognize that the world we perceve trough our nordic lense is
+							very different then what most people think it is. At this stage in
+							my life i had allready found my interests when it comes to hobbies
+							and activities. These include fotball, basketball, hiking &
+							snowboarding.
+						</p>
+					</div>
+				),
+			},
+			{
+				id: 3,
+				name: (
+					<div>
+						<h3>Third page</h3>
+						<p>
+							'\during my youth i lived in Bærum, Norway. I was a pretty active
+							child when i was younger, i continued my hobbies of playing
+							fotball, basketball and snowboard during the winder. Sadly when i
+							was 14 i had to stop with alot of sport due to a snowboarding
+							incident where i hurt my back. This incident changed my life and
+							my activities or hobbies had to be put on hold. So the next few
+							years was spent in front of the computer, thus giving me the
+							opportunity to understand and learn the web. During this time i
+							also started to learn how to code, and this is where my interest
+							in web-development started to grow. Later in my teens, i finished
+							school (high school) and got a job at my old elementary school as
+							a subtitute teacher.
+						</p>
+					</div>
+				),
+			},
+			{
+				id: 4,
+				name: (
+					<div>
+						<h1>Fourth page</h1>
+						<p>
+							In my 20`s i started to study in Lillehammer, witch is a small
+							town north of Oslo. During my time in Lillehammer i was studying
+							tourism, this seemed (at the time) like a smart thing to study as
+							the tourism industry was thriving in Norway at the time. I then
+							finished my studies with a bachelors in marketing & tourism. After
+							my studies, i spent alot of time trying to find a job. I ended up
+							having alot of luck and having the privelige of working in
+							Longyearbyen, Svalbard. This sadly did not last, as 4 months after
+							i landed the jobb, covid-19 hit the shores of Norway and the
+							country went in to lock-down. Thus i had to move back to the
+							mainland and start looking for something new to do. After some
+							time i realised that the tourism industri was not going to pick
+							itself up after the initial covid-19 wave, so i started looking
+							for a new trade. At this time i signed up for frontend
+							web-development course for two years in Oslo.
+						</p>
+					</div>
+				),
+			},
+			{
+				id: 5,
+				name: (
+					<div>
+						<h1>Last page!</h1>
+					</div>
+				),
+			},
+		],
+	});
+
+	return (
+		<div>
+			<SliderContainer
+				id='about'
+				className={'slider-instance'}
+				height={'100vh'}>
+				<SliderWrapper
+					width={width * state.items.length}
+					style={{
+						transform: `translateX(${-(state.currentIndex * width)}px)`,
+						transition: 'transform ease-out 0.30s',
+						width: width * state.items.length + 'px',
+					}}>
+					{state.items.map((i, index) => {
+						return (
+							<Slide
+								key={i.id}
+								last={index === state.items.length - 1}
+								index={index}
+								item={i}
+								dispatch={dispatch}
+								snap={state.snap}
+								width={width}
+							/>
+						);
+					})}
+				</SliderWrapper>
+				<div className='about_nav_container'>
+					{state.currentIndex > 0 && (
+						<ControlLeft onClick={() => dispatch({ type: 'PREV' })}>
+							prev
+						</ControlLeft>
+					)}
+
+					{state.currentIndex < state.items.length - 1 && (
+						<ControlRight onClick={() => dispatch({ type: 'NEXT' })}>
+							next
+						</ControlRight>
+					)}
+				</div>
+				<Navigation>
+					{state.items.map((i, index) => {
+						return (
+							<NavigationItem
+								active={index === state.currentIndex}
+								onClick={() => dispatch({ type: 'GOTO', index })}
+								key={'nav' + i.id}>
+								&nbsp;
+							</NavigationItem>
+						);
+					})}
+				</Navigation>
+			</SliderContainer>
+		</div>
+	);
+};
+
+function useWindowWidth() {
+	const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => setWidth(window.innerWidth);
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
+	return width;
+}
+
+function reducer(state, action) {
+	switch (action.type) {
+		case 'NEXT':
+			return {
+				...state,
+				currentIndex: state.currentIndex + (1 % state.items.length),
+			};
+		case 'PREV':
+			return {
+				...state,
+				currentIndex: state.currentIndex - (1 % state.items.length),
+			};
+		case 'GOTO':
+			return {
+				...state,
+				currentIndex: action.index,
+			};
+		case 'RESET':
+			return { currentIndex: 0, currentPosition: 0 };
+
+		default:
+			return state;
+	}
+}
+
+const Slide = ({ item, width }) => {
+	return (
+		<SliderItem width={width}>
+			<div className='about_container'>{item.name}</div>
+		</SliderItem>
+	);
+};
+
+export default Slider;
+
+/* function move() {
 	let elemJs = document.getElementById('js-progress-bar');
 	let elemReact = document.getElementById('react-progress-bar');
 	let elemDom = document.getElementById('dom-progress-bar');
@@ -85,12 +296,9 @@ function displayAgeLate() {
 		'I then finished my studies with a bachelors in marketing & tourism. After my studies, i spent alot of time trying to find a job. I ended up having alot of luck and having the privelige of working in Longyearbyen, Svalbard. This sadly did not last, as 4 months after i landed the jobb, covid-19 hit the shores of Norway and the country went in to lock-down. Thus i had to move back to the mainland and start looking for something new to do.' +
 		'After some time i realised that the tourism industri was not going to pick itself up after the initial covid-19 wave, so i started looking for a new trade.' +
 		'At this time i signed up for frontend web-development course for two years in Oslo. ';
-}
+} */
 
-export default function About() {
-	return (
-		<div id='about' className='about_page_container'>
-			<h1 id='about_title'>About me</h1>
+/* <h1 id='about_title'>About me</h1>
 			<div className='about_page_content'>
 				<div className='about_page_content_left'>
 					<div className='about_btn_container'>
@@ -130,7 +338,4 @@ export default function About() {
 						<span id='dom-progress-bar'></span>
 					</div>
 				</div>
-			</div>
-		</div>
-	);
-}
+			</div> */

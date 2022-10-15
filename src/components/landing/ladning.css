@@ -7,7 +7,7 @@
   width: 100%;
 	background: linear-gradient(-45deg, #F67280, #C06C84, #6C5B7B, #355C7D);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
 }
 .inner_landing_wrapper {
@@ -24,6 +24,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);
 }
 .Landing_title {
   font-size: 3rem;
@@ -41,9 +42,14 @@ font-family: 'Raleway', sans-serif;
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 0.7rem;
+  padding-top: 0.6rem;
   text-decoration: none;
   border: 1px solid #F67280;
+}
+.about_me_landing:hover {
+  transition: ease-in-out 0.3s;
+  box-shadow: 1px 0px 3px 0px #F67280;
 }
 .landing_content_seperator {
 	border-bottom: #355C7D 4px solid;
@@ -76,14 +82,23 @@ font-family: 'Raleway', sans-serif;
   cursor: pointer;
   background-color: transparent;
   border: 1px solid white;
-  
+}
+.landing_btn:hover {
+  transition: ease-in-out 0.3s;
+  box-shadow: 1px 1px 3px 0px rgba(20, 20, 20, 0.75);
 }
 @keyframes rotate {
   to {
     --angle: 360deg;
   }
 }
-
+.landing_arrow_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 #landing_down_arrow {
   font-size: 1rem;
   color: white;
@@ -93,15 +108,16 @@ font-family: 'Raleway', sans-serif;
   margin-top: 2rem;
   padding: 1rem;
   text-decoration: none;
-  border: 1px solid white;
   animation: rotate 2s linear infinite;
   margin-top: 4rem;
 }
+
 .arrow {
   text-align: center;
   margin: 8% 0;
   color: white;
   cursor: pointer;
+
 }
 .bounce {
   -moz-animation: bounce 2s infinite;

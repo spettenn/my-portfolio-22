@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function Landing() {
 	return (
@@ -31,10 +31,13 @@ export default function Landing() {
 							E-mail
 						</button>
 					</div>
-					<div>
+					<div className='landing_arrow_container'>
 						<div className='arrow bounce'>
 							<a id='landing_down_arrow' href='#about'>
-								<FontAwesomeIcon icon={faArrowDown} size='4x'></FontAwesomeIcon>
+								<FontAwesomeIcon
+									icon={faChevronDown}
+									size='4x'
+									className='landing_arrow_inner'></FontAwesomeIcon>
 							</a>
 						</div>
 					</div>
