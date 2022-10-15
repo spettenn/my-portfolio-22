@@ -34,7 +34,7 @@ export const Navigation = styled.ul`
 	position: absolute;
 	bottom: 10px;
 	margin: 0;
-	margin-left: 50%;
+	margin-left: 44%;
 	margin-right: 50%;
 	padding: 0;
 	left: 0;

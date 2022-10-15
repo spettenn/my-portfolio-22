@@ -1,52 +1,56 @@
-
+a {
+    text-decoration: none;
+}
 .work_page_container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     justify-content: space-evenly;
     height: 100vh;
     width: 100%;
     background-color: #C06C84;
-
 }
 .work_page_title {
-    display: flex; 
-    justify-content: center;
+    text-align: center;
     width: 100%;
-    height: 5rem;
-    margin-top: -30px;
+    color: white;
+    margin-top: -8rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
 }
-.work_top_content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: fit-content;
-    width: 100%;
-}
-.work_page_content_left {
+
+.work_page_card {
 background-color: #6C5B7B;
-width: 20rem;
-height: 15rem;
+width: 50rem;
+height: 13rem;
+margin: auto;
+border-radius: 5rem;
+overflow: hidden;
+cursor: pointer;
+display: flex;
+flex-direction: row;
 }
-.work_page_content_right {
-    background-color: #6C5B7B;
-    width: 20rem;
-    height: 15rem;
+.img_container {
+    width: 40%;
+    height: 100%;
+    max-width: 25rem;
 }
-.work_bottom_content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: fit-content;
-    width: 100%;
+.card_img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
 }
-.work_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 20rem;
-    width: 15rem;
-    background-color: #6C5B7B;
+.card_content {
+    width: 60%;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+.card_title {
+    text-decoration: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+.card_text {
+    text-decoration: none;
+    color: white;
 }

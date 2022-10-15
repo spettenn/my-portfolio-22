@@ -17,26 +17,31 @@ function move() {
 	let elemReact = document.getElementById('react-progress-bar');
 	let elemDom = document.getElementById('dom-progress-bar');
 	let elemNext = document.getElementById('next-progress-bar');
+	let elemDesign = document.getElementById('design-progress-bar');
 	let wrapper = document.getElementById('about-progress-bar');
+
 	const jsSkill = 80;
 	const reactSkill = 70;
 	const domSkill = 60;
 	const nextSkill = 50;
+	const designSkill = 40;
 	let stepValueJs = 0;
 	let stepValueReact = 0;
 	let stepValueDom = 0;
 	let stepValueNext = 0;
+	let stepValueDesign = 0;
 	let idJs = setInterval(frameJs, 300);
 	let idReact = setInterval(frameReact, 300);
 	let idDom = setInterval(frameDom, 300);
 	let idNext = setInterval(frameNext, 300);
+	let idDesign = setInterval(frameDesign, 300);
 
 	function frameJs() {
 		if (stepValueJs >= jsSkill) {
 			clearInterval(idJs);
 		} else {
 			elemJs.style.width = stepValueJs + 5 + '%';
-			elemJs.innerHTML = stepValueJs + 5 + '%' + ' - Javascript';
+			elemJs.innerHTML = stepValueJs + 5 + '%';
 			stepValueJs = stepValueJs + 5;
 		}
 		move.on('click', function () {
@@ -57,7 +62,7 @@ function move() {
 		}
 	}
 	function frameNext() {
-		if (stepValueNext >= domSkill) {
+		if (stepValueNext >= nextSkill) {
 			clearInterval(idNext);
 		} else {
 			elemNext.style.width = stepValueNext + 5 + '%';
@@ -66,12 +71,21 @@ function move() {
 		}
 	}
 	function frameDom() {
-		if (stepValueDom >= nextSkill) {
+		if (stepValueDom >= domSkill) {
 			clearInterval(idDom);
 		} else {
 			elemDom.style.width = stepValueDom + 5 + '%';
 			elemDom.innerHTML = stepValueDom + 5 + '%';
 			stepValueDom = stepValueDom + 5;
+		}
+	}
+	function frameDesign() {
+		if (stepValueDesign >= designSkill) {
+			clearInterval(idDesign);
+		} else {
+			elemDesign.style.width = stepValueDesign + 5 + '%';
+			elemDesign.innerHTML = stepValueDesign + 5 + '%';
+			stepValueDesign = stepValueDesign + 5;
 		}
 	}
 }
@@ -85,7 +99,7 @@ const Slider = () => {
 				id: 1,
 				name: (
 					<div className='about_page_one'>
-						<h4>Hello!</h4>
+						<h4 className='about_one_title'>Hello!</h4>
 						<p className='about_one_text'>
 							Take a look trough my time-line and see where i am at!
 						</p>
@@ -96,7 +110,7 @@ const Slider = () => {
 				id: 2,
 				name: (
 					<div className='about_page_two'>
-						<h3>Second page</h3>
+						<h3 className='about_two_title'>Age 1 - 10</h3>
 						<p className='about_two_text'>
 							I was born in oslo (1995), or more spesificly the suburbs. When i
 							was young, me and my family lived abroad for three years. This
@@ -117,7 +131,7 @@ const Slider = () => {
 				id: 3,
 				name: (
 					<div className='about_page_three'>
-						<h3>Third page</h3>
+						<h3 className='about_three_title'>Age 10 - 20</h3>
 						<p className='about_three_text'>
 							'\during my youth i lived in Bærum, Norway. I was a pretty active
 							child when i was younger, i continued my hobbies of playing
@@ -139,7 +153,7 @@ const Slider = () => {
 				id: 4,
 				name: (
 					<div className='about_page_four'>
-						<h1>Fourth page</h1>
+						<h1 className='about_four_title'>Age 20 - Today</h1>
 						<p className='about_four_text'>
 							In my 20`s i started to study in Lillehammer, witch is a small
 							town north of Oslo. During my time in Lillehammer i was studying
@@ -164,25 +178,45 @@ const Slider = () => {
 				id: 5,
 				name: (
 					<div className='about_page_five'>
-						<h1>Last page!</h1>
-						<button id='about_progress_btn' onClick={move}>
-							Press me and see where my dev-skills are at!
-						</button>
-
-						<div className='progressbarWrapper'>
-							<span id='js-progress-bar'></span>
-						</div>
-						<p>React</p>
-						<div className='progressbarWrapper'>
-							<span id='react-progress-bar'></span>
-						</div>
-						<p>nextJS</p>
-						<div className='progressbarWrapper'>
-							<span id='next-progress-bar'></span>
-						</div>
-						<p>html / css</p>
-						<div className='progressbarWrapper'>
-							<span id='dom-progress-bar'></span>
+						<h1 className='page_five_title'>So, where are my skills at now?</h1>
+						<div className='about_five_container'>
+							<div className='about_fiv_left'>
+								<p>
+									I am currently navigating the vast world of web-developement
+									and learning new things everyday. I have recently been working
+									with a bit of databases using SQL, but not enough that i feel
+									i can call myself a database developer. <br></br>
+									One of the biggest challanges for me is to know what
+									spesificly to focus on when it comes to new languages or
+									framworks to learn.
+								</p>
+								<p></p>
+							</div>
+							<div className='about_five_right'>
+								<button id='about_progress_btn' onClick={move}>
+									Press me and see where my dev-skills are at!
+								</button>
+								<p>javaScript</p>
+								<div className='progressbarWrapper'>
+									<span id='js-progress-bar'></span>
+								</div>
+								<p>React</p>
+								<div className='progressbarWrapper'>
+									<span id='react-progress-bar'></span>
+								</div>
+								<p>nextJS</p>
+								<div className='progressbarWrapper'>
+									<span id='next-progress-bar'></span>
+								</div>
+								<p>html / css</p>
+								<div className='progressbarWrapper'>
+									<span id='dom-progress-bar'></span>
+								</div>
+								<p>Design</p>
+								<div className='progressbarWrapper'>
+									<span id='design-progress-bar'></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				),
