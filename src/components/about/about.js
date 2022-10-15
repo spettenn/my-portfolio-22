@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
 	SliderItem,
@@ -10,6 +12,70 @@ import {
 	ControlRight,
 } from './style';
 
+function move() {
+	let elemJs = document.getElementById('js-progress-bar');
+	let elemReact = document.getElementById('react-progress-bar');
+	let elemDom = document.getElementById('dom-progress-bar');
+	let elemNext = document.getElementById('next-progress-bar');
+	let wrapper = document.getElementById('about-progress-bar');
+	const jsSkill = 80;
+	const reactSkill = 70;
+	const domSkill = 60;
+	const nextSkill = 50;
+	let stepValueJs = 0;
+	let stepValueReact = 0;
+	let stepValueDom = 0;
+	let stepValueNext = 0;
+	let idJs = setInterval(frameJs, 300);
+	let idReact = setInterval(frameReact, 300);
+	let idDom = setInterval(frameDom, 300);
+	let idNext = setInterval(frameNext, 300);
+
+	function frameJs() {
+		if (stepValueJs >= jsSkill) {
+			clearInterval(idJs);
+		} else {
+			elemJs.style.width = stepValueJs + 5 + '%';
+			elemJs.innerHTML = stepValueJs + 5 + '%' + ' - Javascript';
+			stepValueJs = stepValueJs + 5;
+		}
+		move.on('click', function () {
+			if (wrapper.css('opacity') === 0) {
+				wrapper.css('opacity', 1);
+			} else {
+				wrapper.css('opacity', 0);
+			}
+		});
+	}
+	function frameReact() {
+		if (stepValueReact >= reactSkill) {
+			clearInterval(idReact);
+		} else {
+			elemReact.style.width = stepValueReact + 5 + '%';
+			elemReact.innerHTML = stepValueReact + 5 + '%';
+			stepValueReact = stepValueReact + 5;
+		}
+	}
+	function frameNext() {
+		if (stepValueNext >= domSkill) {
+			clearInterval(idNext);
+		} else {
+			elemNext.style.width = stepValueNext + 5 + '%';
+			elemNext.innerHTML = stepValueNext + 5 + '%';
+			stepValueNext = stepValueNext + 5;
+		}
+	}
+	function frameDom() {
+		if (stepValueDom >= nextSkill) {
+			clearInterval(idDom);
+		} else {
+			elemDom.style.width = stepValueDom + 5 + '%';
+			elemDom.innerHTML = stepValueDom + 5 + '%';
+			stepValueDom = stepValueDom + 5;
+		}
+	}
+}
+
 const Slider = () => {
 	const width = useWindowWidth();
 	const [state, dispatch] = useReducer(reducer, {
@@ -19,18 +85,19 @@ const Slider = () => {
 				id: 1,
 				name: (
 					<div className='about_page_one'>
-						<h1>First</h1>
-						<p>First paragraph</p>
+						<h4>Hello!</h4>
+						<p className='about_one_text'>
+							Take a look trough my time-line and see where i am at!
+						</p>
 					</div>
 				),
 			},
 			{
 				id: 2,
-				// stle object
 				name: (
 					<div className='about_page_two'>
 						<h3>Second page</h3>
-						<p>
+						<p className='about_two_text'>
 							I was born in oslo (1995), or more spesificly the suburbs. When i
 							was young, me and my family lived abroad for three years. This
 							forced me to learn english at a very young age, and in a sence
@@ -49,9 +116,9 @@ const Slider = () => {
 			{
 				id: 3,
 				name: (
-					<div>
+					<div className='about_page_three'>
 						<h3>Third page</h3>
-						<p>
+						<p className='about_three_text'>
 							'\during my youth i lived in Bærum, Norway. I was a pretty active
 							child when i was younger, i continued my hobbies of playing
 							fotball, basketball and snowboard during the winder. Sadly when i
@@ -71,9 +138,9 @@ const Slider = () => {
 			{
 				id: 4,
 				name: (
-					<div>
+					<div className='about_page_four'>
 						<h1>Fourth page</h1>
-						<p>
+						<p className='about_four_text'>
 							In my 20`s i started to study in Lillehammer, witch is a small
 							town north of Oslo. During my time in Lillehammer i was studying
 							tourism, this seemed (at the time) like a smart thing to study as
@@ -96,8 +163,27 @@ const Slider = () => {
 			{
 				id: 5,
 				name: (
-					<div>
+					<div className='about_page_five'>
 						<h1>Last page!</h1>
+						<button id='about_progress_btn' onClick={move}>
+							Press me and see where my dev-skills are at!
+						</button>
+
+						<div className='progressbarWrapper'>
+							<span id='js-progress-bar'></span>
+						</div>
+						<p>React</p>
+						<div className='progressbarWrapper'>
+							<span id='react-progress-bar'></span>
+						</div>
+						<p>nextJS</p>
+						<div className='progressbarWrapper'>
+							<span id='next-progress-bar'></span>
+						</div>
+						<p>html / css</p>
+						<div className='progressbarWrapper'>
+							<span id='dom-progress-bar'></span>
+						</div>
 					</div>
 				),
 			},
@@ -131,19 +217,7 @@ const Slider = () => {
 						);
 					})}
 				</SliderWrapper>
-				<div className='about_nav_container'>
-					{state.currentIndex > 0 && (
-						<ControlLeft onClick={() => dispatch({ type: 'PREV' })}>
-							prev
-						</ControlLeft>
-					)}
 
-					{state.currentIndex < state.items.length - 1 && (
-						<ControlRight onClick={() => dispatch({ type: 'NEXT' })}>
-							next
-						</ControlRight>
-					)}
-				</div>
 				<Navigation>
 					{state.items.map((i, index) => {
 						return (
@@ -156,6 +230,23 @@ const Slider = () => {
 						);
 					})}
 				</Navigation>
+				<div className='about_nav_container'>
+					{state.currentIndex > 0 && (
+						<ControlLeft
+							className='nav_btn_about'
+							onClick={() => dispatch({ type: 'PREV' })}>
+							<FontAwesomeIcon size='3x' icon={faArrowLeft}></FontAwesomeIcon>
+						</ControlLeft>
+					)}
+
+					{state.currentIndex < state.items.length - 1 && (
+						<ControlRight
+							className='nav_btn_about'
+							onClick={() => dispatch({ type: 'NEXT' })}>
+							<FontAwesomeIcon size='3x' icon={faArrowRight}></FontAwesomeIcon>
+						</ControlRight>
+					)}
+				</div>
 			</SliderContainer>
 		</div>
 	);
