@@ -8,7 +8,9 @@ export default function Work() {
 	return (
 		<div id='work' className='work_page_container'>
 			<h2 class='work_page_title'>My previous work</h2>
-			<a href='https://superlative-sunshine-5a1fb3.netlify.app/'>
+			<a
+				className='nav_prev_work'
+				href='https://superlative-sunshine-5a1fb3.netlify.app/'>
 				<div className='work_page_card'>
 					<div className='img_container'>
 						<img
@@ -29,7 +31,9 @@ export default function Work() {
 					</div>
 				</div>
 			</a>
-			<a href='https://unruffled-wescoff-562d65.netlify.app/index.html'>
+			<a
+				className='nav_prev_work'
+				href='https://unruffled-wescoff-562d65.netlify.app/index.html'>
 				<div className='work_page_card'>
 					<div className='img_container'>
 						<img

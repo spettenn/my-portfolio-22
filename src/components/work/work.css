@@ -1,5 +1,7 @@
-a {
+.nav_prev_work {
     text-decoration: none;
+    max-width: 50rem;
+    margin: auto;
 }
 .work_page_container {
     display: flex;
