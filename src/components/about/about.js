@@ -230,6 +230,14 @@ const Slider = () => {
 								</div>
 							</div>
 						</div>
+						<div className='arrow bounce'>
+							<a id='about_down_arrow' href='#work'>
+								<FontAwesomeIcon
+									icon={faChevronDown}
+									size='4x'
+									className='about_arrow_inner'></FontAwesomeIcon>
+							</a>
+						</div>
 					</div>
 				),
 			},
