@@ -28,6 +28,7 @@ export default function Work() {
 							the product cards, and how to design them best, but i feel like i
 							found a good solution.
 						</p>
+						<p>gitHub: https://github.com/spettenn/project-examne-final</p>
 					</div>
 				</div>
 			</a>
@@ -49,6 +50,7 @@ export default function Work() {
 							blogg. The point of the website was to get better at using
 							endpoints and scaleing
 						</p>
+						<p>gitHub repositori:</p>
 					</div>
 				</div>
 			</a>
