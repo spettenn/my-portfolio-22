@@ -190,9 +190,11 @@ const Slider = () => {
 				id: 5,
 				name: (
 					<div className='about_page_five'>
-						<h1 className='page_five_title'>So, where are my skills at now?</h1>
 						<div className='about_five_container'>
 							<div className='about_fiv_left'>
+								<h1 className='page_five_title'>
+									So, where are my skills at now?
+								</h1>
 								<p>
 									I am currently navigating the vast world of web-developement
 									and learning new things everyday. I have recently been working
@@ -231,7 +233,7 @@ const Slider = () => {
 							</div>
 						</div>
 						<div className='arrow bounce'>
-							<a id='about_down_arrow' href='#work'>
+							<a id='about_down_arrow_last' href='#work'>
 								<FontAwesomeIcon
 									icon={faChevronDown}
 									size='4x'
