@@ -1,15 +1,38 @@
-export default function get_joke_of_the_day() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function () {
-		if (this.readyState === 4 && this.status === 200) {
-			// Access the result here
-			alert(this.responseText);
-		}
-	};
-	xhttp.open('GET', 'https://api.jokes.one/jod?category=animal', true);
-	xhttp.setRequestHeader('Content-type', 'application/json');
-	xhttp.setRequestHeader('X-JokesOne-Api-Secret', 'YOUR API HERE');
-	xhttp.send();
-}
+import { useEffect, useState } from 'react';
 
-get_joke_of_the_day();
+const options = {
+	method: 'GET',
+	headers: {
+		accept: 'application/json',
+		'X-RapidAPI-Key': '6727fd07abmshdddcbc34023c21fp187140jsnab366a7a51bd',
+		'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
+	},
+};
+
+fetch(
+	'https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random',
+	options
+)
+	.then((response) => response.json())
+	.then((response) => console.log(response))
+	.catch((err) => console.error(err));
+
+export default function Joke() {
+	const [joke, setJoke] = useState({});
+
+	useEffect(() => {
+		fetch(
+			'https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random',
+			options
+		)
+			.then((response) => response.json())
+			.then((response) => setJoke(response))
+			.catch((err) => console.error(err));
+	}, []);
+
+	return (
+		<div className='joke_container'>
+			<div className='joke'>{joke.value}</div>
+		</div>
+	);
+}

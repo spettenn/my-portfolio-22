@@ -7,6 +7,7 @@ import ContactForm from './components/contact/contact';
 function App() {
 	return (
 		<div className='App'>
+			<title>My portfolio</title>
 			<Landing></Landing>
 			<About></About>
 			<Work></Work>

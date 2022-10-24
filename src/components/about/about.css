@@ -10,7 +10,6 @@
     height: 100%;
     width: 100%;
     justify-content: space-evenly;
-
 }
 .about_btn_container {
     display: flex;
@@ -402,5 +401,5 @@ padding-top: 2rem;
     margin-top: 50%;
 }
 .nav_btn_about:hover {
-    color: rgb(70, 104, 138);
+    color: rgb(209, 209, 209);
 }

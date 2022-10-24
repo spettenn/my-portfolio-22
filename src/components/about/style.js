@@ -46,14 +46,14 @@ export const NavigationItem = styled.li`
 	width: 30px;
 	height: 4px;
 	margin: 0 3px;
-	background: black;
+	background: transparent;
 	border-radius: 0px;
 	cursor: pointer;
 	border: 1px solid white;
 	${(props) =>
 		props.active &&
 		css`
-			background: white;
+			background: #355c7d;
 		`};
 `;
 

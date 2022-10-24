@@ -103,10 +103,10 @@ const Slider = () => {
 				id: 1,
 				name: (
 					<div className='about_page_one'>
-						<h4 className='about_one_title'>Hello!</h4>
 						<p className='about_one_text'>
 							Take a look trough my time-line and see where i am at!
 						</p>
+
 						<div className='arrow bounce'>
 							<a id='about_down_arrow' href='#work'>
 								<FontAwesomeIcon
@@ -124,15 +124,15 @@ const Slider = () => {
 					<div className='about_page_two'>
 						<h3 className='about_two_title'>Age 1 - 10</h3>
 						<p className='about_two_text'>
-							I was born in oslo (1995), or more spesificly the suburbs. When i
-							was young, me and my family lived abroad for three years. This
-							forced me to learn english at a very young age, and in a sence
-							gave me better oportunities to work with web-development as
+							I was born in oslo (1995), or more specifically the suburbs. When
+							I was young, me and my family lived abroad for three years. This
+							forced me to learn english at a very young age, and in a sense
+							gave me better opportunities to work with web-development as
 							english has been the default language for the web. Going to
 							international school at this age helped give med perspective and
-							recognize that the world we perceve trough our nordic lense is
+							recognize that the world we perceive through our nordic lense is
 							very different then what most people think it is. At this stage in
-							my life i had allready found my interests when it comes to hobbies
+							my life I had already found my interests when it comes to hobbies
 							and activities. These include fotball, basketball, hiking &
 							snowboarding.
 						</p>
@@ -145,18 +145,18 @@ const Slider = () => {
 					<div className='about_page_three'>
 						<h3 className='about_three_title'>Age 10 - 20</h3>
 						<p className='about_three_text'>
-							'\during my youth i lived in Bærum, Norway. I was a pretty active
-							child when i was younger, i continued my hobbies of playing
-							fotball, basketball and snowboard during the winder. Sadly when i
-							was 14 i had to stop with alot of sport due to a snowboarding
-							incident where i hurt my back. This incident changed my life and
-							my activities or hobbies had to be put on hold. So the next few
-							years was spent in front of the computer, thus giving me the
-							opportunity to understand and learn the web. During this time i
-							also started to learn how to code, and this is where my interest
-							in web-development started to grow. Later in my teens, i finished
+							During my youth I lived in Bærum, Norway. I was a pretty active
+							child when I was younger, I continued my hobbies of playing
+							football, basketball and snowboarding during the winter. Sadly
+							when i was 14 i had to stop with a lot of sport due to a
+							snowboarding incident where i hurt my back. This incident changed
+							my life and my activities or hobbies had to be put on hold. So the
+							next few years were spent in front of the computer, thus giving me
+							the opportunity to understand and learn the web. During this time
+							I also started to learn how to code, and this is where my interest
+							in web-development started to grow. Later in my teens, I finished
 							school (high school) and got a job at my old elementary school as
-							a subtitute teacher.
+							a substitute teacher.
 						</p>
 					</div>
 				),
@@ -167,20 +167,20 @@ const Slider = () => {
 					<div className='about_page_four'>
 						<h1 className='about_four_title'>Age 20 - Today</h1>
 						<p className='about_four_text'>
-							In my 20`s i started to study in Lillehammer, witch is a small
+							In my 20's I started to study in Lillehammer, which is a small
 							town north of Oslo. During my time in Lillehammer i was studying
 							tourism, this seemed (at the time) like a smart thing to study as
 							the tourism industry was thriving in Norway at the time. I then
 							finished my studies with a bachelors in marketing & tourism. After
-							my studies, i spent alot of time trying to find a job. I ended up
-							having alot of luck and having the privelige of working in
+							my studies, I spent a lot of time trying to find a job. I ended up
+							having a lot of luck and having the privilege of working in
 							Longyearbyen, Svalbard. This sadly did not last, as 4 months after
-							i landed the jobb, covid-19 hit the shores of Norway and the
-							country went in to lock-down. Thus i had to move back to the
+							I landed the job, covid-19 hit the shores of Norway and the
+							country went into lock-down. Thus I had to move back to the
 							mainland and start looking for something new to do. After some
-							time i realised that the tourism industri was not going to pick
-							itself up after the initial covid-19 wave, so i started looking
-							for a new trade. At this time i signed up for frontend
+							time I realized that the tourism industry was not going to pick
+							itself up after the initial covid-19 wave, so I started looking
+							for a new trade. At this time I signed up for a frontend
 							web-development course for two years in Oslo.
 						</p>
 					</div>
@@ -196,13 +196,12 @@ const Slider = () => {
 									So, where are my skills at now?
 								</h1>
 								<p>
-									I am currently navigating the vast world of web-developement
+									I am currently navigating the vast world of web-development
 									and learning new things everyday. I have recently been working
-									with a bit of databases using SQL, but not enough that i feel
-									i can call myself a database developer. <br></br>
-									One of the biggest challanges for me is to know what
-									spesificly to focus on when it comes to new languages or
-									framworks to learn.
+									with a bit of databases using SQL, but not enough that I feel
+									I can call myself a database developer. One of the biggest
+									challenges for me is to know what specifically to focus on
+									when it comes to new languages or frameworks to learn.
 								</p>
 								<p></p>
 							</div>
@@ -210,7 +209,7 @@ const Slider = () => {
 								<button id='about_progress_btn' onClick={move}>
 									Press me and see where my dev-skills are at!
 								</button>
-								<p>javaScript</p>
+								<p>JavaScript</p>
 								<div className='progressbarWrapper'>
 									<span id='js-progress-bar'></span>
 								</div>
@@ -218,11 +217,11 @@ const Slider = () => {
 								<div className='progressbarWrapper'>
 									<span id='react-progress-bar'></span>
 								</div>
-								<p>nextJS</p>
+								<p>NextJS</p>
 								<div className='progressbarWrapper'>
 									<span id='next-progress-bar'></span>
 								</div>
-								<p>html / css</p>
+								<p>HTML / CSS</p>
 								<div className='progressbarWrapper'>
 									<span id='dom-progress-bar'></span>
 								</div>

@@ -7,17 +7,22 @@ import { FaDiscord, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 import Weather from './weather';
 
+const eMail = () => {
+	alert('E-mail has been copied!');
+	navigator.clipboard.writeText('Aleksanderspetalen@gmail');
+};
+const discord = () => {
+	alert('Discord username has been copied!');
+	navigator.clipboard.writeText('Aleksander#1255');
+};
+
 export default function Contact() {
 	return (
 		<div id='contact' className='contact_page_container'>
 			<div className='contact_page_content'>
 				<div className='contact_info_container'>
 					<h4 id='contact_sub_title'>Means to reach me:</h4>
-					<button
-						className='contact_info_email'
-						onClick={() =>
-							navigator.clipboard.writeText('Aleksanderspetalen@gmail.com')
-						}>
+					<button className='contact_info_email' onClick={eMail}>
 						Aleksanderspetalen@gmail
 						<FontAwesomeIcon
 							className='copy_email_icon'
@@ -27,10 +32,7 @@ export default function Contact() {
 					<img src={me} className='img_me' alt='me' width='150' height='150' />
 					<div className='soMe_contact'>
 						<h1>
-							<FaDiscord
-								className='icon_contact'
-								onClick={() => navigator.clipboard.writeText('Aleksander#1255')}
-							/>
+							<FaDiscord className='icon_contact' onClick={discord} />
 						</h1>
 						<a href='https://github.com/spettenn'>
 							<h1>

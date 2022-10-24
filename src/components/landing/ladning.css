@@ -45,7 +45,21 @@ font-family: 'Raleway', sans-serif;
   padding: 0.7rem;
   padding-top: 0.6rem;
   text-decoration: none;
-  border: 1px solid #F67280;
+  border: solid 1px #F67280;
+
+/*   border-radius: 100rem;
+  padding: 1rem;
+  font-family: 'Avenir Next';
+  font-size: 1rem;
+  padding: .5rem 3rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+  background-color: transparent; */
 }
 .about_me_landing:hover {
   transition: ease-in-out 0.3s;
@@ -145,4 +159,14 @@ font-family: 'Raleway', sans-serif;
 	100% {
 		background-position: 0% 50%;
 	}
+}
+.joke_container {
+  max-width: 30rem;
+  margin-top: 2rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
 }

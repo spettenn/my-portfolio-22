@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Joke from './joke';
 
 export default function Landing() {
 	return (
@@ -31,6 +32,7 @@ export default function Landing() {
 							E-mail
 						</button>
 					</div>
+					<Joke />
 					<div className='landing_arrow_container'>
 						<div className='arrow bounce'>
 							<a id='landing_down_arrow' href='#about'>
