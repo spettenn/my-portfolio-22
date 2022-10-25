@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FORM_ENDPOINT = ''; // this is the endpoint
+const FORM_ENDPOINT = 'Aleksanderspetalen@gmail.com'; // this is the endpoint
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState(false);

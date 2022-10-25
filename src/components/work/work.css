@@ -20,7 +20,6 @@
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
 }
-
 .work_page_card {
 background-color: #6C5B7B;
 width: 50rem;
@@ -92,4 +91,14 @@ flex-direction: row;
     60% {
       transform: translateY(-15px);
     }
+  }
+
+
+  @media (max-width: 700px) {
+.about_five_right {
+  display: none;
+}
+.work_page_card {
+  width: 95%;
+}
   }
