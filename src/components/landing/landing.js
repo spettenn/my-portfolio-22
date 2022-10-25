@@ -10,19 +10,17 @@ export default function Landing() {
 				<div className='landing_content'>
 					<h1 className='Landing_title'>Hello, I am Aleksander :)</h1>
 					<div>
-						<a className='about_me_landing' href='#about' aria-current='page'>
-							More about me
+						<a href='#about' aria-current='page'>
+							<button className='about_me_landing'>More about me</button>
 						</a>
 					</div>
 					<div className='landing_content_seperator'></div>
 					<div className='landing_navlinks'>
-						<a
-							className='landing_btn'
-							href='https://www.linkedin.com/in/aleksander-spetalen-450013209/'>
-							linkedIn
+						<a href='https://www.linkedin.com/in/aleksander-spetalen-450013209/'>
+							<button className='landing_btn'>linkedIn</button>
 						</a>
-						<a className='landing_btn' href='https://github.com/spettenn'>
-							gitHub
+						<a href='https://github.com/spettenn'>
+							<button className='landing_btn'>gitHub</button>
 						</a>
 						<button
 							className='landing_btn'

@@ -175,6 +175,7 @@ height: 2.2rem;
 @media (max-width: 700px) {
   .contact_page_container {
     height: 100%;
+
   }
   .contact_page_content {
     flex-direction: column;
@@ -184,9 +185,12 @@ height: 2.2rem;
   }
   .contact_info_container {
     margin-bottom: 2rem;
+    width: 100%;
   }
   .contact_form_container {
     margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
   }
   .contact_page_footer {
     flex-direction: column;
@@ -200,4 +204,11 @@ height: 2.2rem;
   .weather_container {
     margin-left: 0%;
   }
+  .form_input {
+    width: 95%;
+  }
+  #message_form {
+    width: 95%;
+  }
+  
 }

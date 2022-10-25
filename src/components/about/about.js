@@ -5,7 +5,6 @@ import {
 	faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import {
 	SliderItem,
 	SliderContainer,
@@ -23,7 +22,6 @@ function move() {
 	let elemNext = document.getElementById('next-progress-bar');
 	let elemDesign = document.getElementById('design-progress-bar');
 	let wrapper = document.getElementById('about-progress-bar');
-
 	const jsSkill = 80;
 	const reactSkill = 70;
 	const domSkill = 60;
@@ -106,7 +104,6 @@ const Slider = () => {
 						<p className='about_one_text'>
 							Take a look trough my time-line and see where i am at!
 						</p>
-
 						<div className='arrow bounce'>
 							<a id='about_down_arrow' href='#work'>
 								<FontAwesomeIcon
@@ -195,7 +192,7 @@ const Slider = () => {
 								<h1 className='page_five_title'>
 									So, where are my skills at now?
 								</h1>
-								<p>
+								<p className='about_page_text'>
 									I am currently navigating the vast world of web-development
 									and learning new things everyday. I have recently been working
 									with a bit of databases using SQL, but not enough that I feel
@@ -272,7 +269,6 @@ const Slider = () => {
 						);
 					})}
 				</SliderWrapper>
-
 				<Navigation>
 					{state.items.map((i, index) => {
 						return (
@@ -293,7 +289,6 @@ const Slider = () => {
 							<FontAwesomeIcon size='3x' icon={faArrowLeft}></FontAwesomeIcon>
 						</ControlLeft>
 					)}
-
 					{state.currentIndex < state.items.length - 1 && (
 						<ControlRight
 							className='nav_btn_about'
@@ -312,9 +307,7 @@ function useWindowWidth() {
 
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
-
 		window.addEventListener('resize', handleResize);
-
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
@@ -341,7 +334,6 @@ function reducer(state, action) {
 			};
 		case 'RESET':
 			return { currentIndex: 0, currentPosition: 0 };
-
 		default:
 			return state;
 	}
