@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const FORM_ENDPOINT = 'Aleksanderspetalen@gmail.com'; // this is the endpoint
+const FORM_ENDPOINT =
+	'https://public.herotofu.com/v1/c4dec080-5f6d-11ed-b82c-5d75eaa7ccff'; // this is the endpoint hosted on herotofu.com
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState(false);

@@ -39,6 +39,9 @@ export const Navigation = styled.ul`
 	padding: 0;
 	left: 0;
 	display: flex;
+	@media (max-width: 700px) {
+		margin-left: 12%;
+	}
 `;
 
 export const NavigationItem = styled.li`
@@ -55,6 +58,10 @@ export const NavigationItem = styled.li`
 		css`
 			background: #355c7d;
 		`};
+	@media (max-width: 700px) {
+		width: 50px;
+		height: 10px;
+	}
 `;
 
 export const Control = styled.div`
