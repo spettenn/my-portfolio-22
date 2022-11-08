@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import chuck from '../../images/cuck_norris.jpg';
 
 const FORM_ENDPOINT =
 	'https://public.herotofu.com/v1/c4dec080-5f6d-11ed-b82c-5d75eaa7ccff'; // this is the endpoint hosted on herotofu.com
@@ -13,9 +14,11 @@ const ContactForm = () => {
 
 	if (submitted) {
 		return (
-			<>
-				<h2>Thank you!</h2>
-			</>
+			<img
+				id='chuck_submit_img'
+				alt='This is suposed to be a chuck norris meme'
+				src={chuck}
+			/>
 		);
 	}
 

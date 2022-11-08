@@ -172,6 +172,9 @@ height: 2.2rem;
   color: white;
   cursor: pointer;
 }
+.chuck_submit_img {
+  height: 15rem;
+}
 @media (max-width: 700px) {
   .contact_page_container {
     height: 100%;
@@ -210,5 +213,7 @@ height: 2.2rem;
   #message_form {
     width: 95%;
   }
-  
+  .chuck_submit_img {
+    height: 10rem;
+  }
 }
