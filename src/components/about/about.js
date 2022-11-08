@@ -24,7 +24,7 @@ function move() {
 	let wrapper = document.getElementById('about-progress-bar');
 	const jsSkill = 80;
 	const reactSkill = 70;
-	const domSkill = 60;
+	const domSkill = 70;
 	const nextSkill = 50;
 	const designSkill = 40;
 	let stepValueJs = 0;
