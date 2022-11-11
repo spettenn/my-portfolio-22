@@ -9,6 +9,10 @@ I went for a simple style with a little more information about myself then in po
 I am using some fun free API from rapidAPI on this project, so if you want to use it you need to get your own API key.
 The two API's I am using is: chuck Norris jokes and openWeatherMap, with Oslo being the default city.
 
+## Design
+
+i used colorHunter to find a color scheme that I liked. The design was based around the JS framwork or "package" called fullPage.js. I wanted to make a one page website with a little bit of animation. This turned out to be harder then expected, as the "work" section was a little bit hard to make. I ended up using a lot of padding and margin to make it look good. I also used a lot of flexbox to make the page responsive.
+
 ## Installation
 
 To install this project you need to have Node.js installed on your computer. You can download it here: https://nodejs.org/en/download/
@@ -41,3 +45,4 @@ Made by me (Aleksander Spetalen) 2022
 Contact me on my email: Aleksanderspetalen@gmail.com
 Discord: Aleksander#1255
 LinkedIn: https://www.linkedin.com/in/aleksander-spetalen-450013209/
+The contact form is hosted on herotofu.com, so all use of the form get directed to my email.
