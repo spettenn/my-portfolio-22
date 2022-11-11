@@ -8,7 +8,6 @@ export default function Work() {
 	return (
 		<div id='work' className='work_page_container'>
 			<h2 class='work_page_title'>My previous work</h2>
-
 			<div className='work_page_card'>
 				<div className='img_container'>
 					<img
@@ -47,7 +46,9 @@ export default function Work() {
 						The point of the website was to get better at using endpoints and
 						scaleing
 					</p>
-					<p className='git_link'>gitHub repositori:</p>
+					<p className='git_link'>
+						gitHub: https://github.com/spettenn/project-eksamen
+					</p>
 					<a href='https://unruffled-wescoff-562d65.netlify.app/index.html'>
 						<button className='card_link'>More</button>
 					</a>
